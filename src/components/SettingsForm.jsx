@@ -87,6 +87,21 @@ class SettingsForm extends Component {
                 </option>
               </Form.Select>
             </Form.Group>
+            <Form.Group>
+              <Form.Check
+                type="checkbox"
+                label="controllo età"
+                checked={this.state.form.maturitySettings}
+                onChange={(e) => {
+                  this.setState({
+                    form: {
+                      ...this.state.form,
+                      maturitySettings: e.target.checked,
+                    },
+                  })
+                }}
+              ></Form.Check>
+            </Form.Group>
             <Button variant="secondary">Submit</Button>
           </Form>
         </Container>
