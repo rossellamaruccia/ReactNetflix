@@ -20,9 +20,13 @@ class FetchInfo extends Component{
             else {throw new Error('errore nella chiamata')}
                 })
                 .then((data) => {
-                    console.log(data)
+                  console.log(data)
+                  const MoviesArray = []
+                  for (let i = 0; i < 6; i++){
+                    MoviesArray.push(data.Search[i])
+                  }
                     this.setState({
-                        moviesObject: data.Search
+                        moviesObject: MoviesArray
                     })
                 })
                 .catch(err => {
@@ -37,11 +41,11 @@ class FetchInfo extends Component{
           <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4">
             {this.state.moviesObject.map((result) => {
               return (
-                <Col className="col mb-2 text-center px-1">
-                  <Card style={{ height: "10em" }}>
+                <Col key={result.imdbID} className="col mb-2 text-center px-1">
+                  <Card style={{ height: "170px" }}>
                     <Card.Img
                       src={result.Poster}
-                      style={{objectFit: "cover", overflowY: "hidden"}}
+                      style={{ objectFit: "fill", overflowY: "hidden", verticalAlign: "middle", overflowClipMargin: "visual-box", }}
                     ></Card.Img>
                   </Card>
                 </Col>
