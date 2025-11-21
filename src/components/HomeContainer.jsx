@@ -4,18 +4,18 @@ import FetchInfo from "./FetchInfo"
 const HomeContainer = () => {
     return (
       <>
-        <Container fluid className="bg-black">
+        <Container fluid className="bg-dark">
           <Row>
-            <h1 className="text-white">Movies</h1>
-            <FetchInfo movie="Dragon" />
+            <h2 className="text-white">Movies</h2>
+            <FetchInfo movie="Shaolin" />
           </Row>
           <Row>
-            <h2 className="text-white">Trending Now</h2>
-            <FetchInfo movie="Fast" />
+            <h5 className="text-white">Trending Now</h5>
+            <FetchInfo movie="Matrix" />
           </Row>
           <Row>
-            <h2 className="text-white">Watch it Again</h2>
-            <FetchInfo movie="Office" />
+            <h5 className="text-white">Watch it Again</h5>
+            <FetchInfo movie="Natale" />
           </Row>
         </Container>
       </>
