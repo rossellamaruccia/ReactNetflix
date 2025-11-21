@@ -3,7 +3,7 @@
 // montare tre componenti diversi con props = nome_film
 
 import { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 
 
 class FetchInfo extends Component{
@@ -34,16 +34,21 @@ class FetchInfo extends Component{
 
     render() {
         return (
-            <Row>
-                {
-                    this.state.moviesObject.map((result) => {
-                        return (
-                            <Col><img src= {result.Poster } /></Col>
-                        )
-                    })
-                }
-                </Row>
-            )  
+          <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4">
+            {this.state.moviesObject.map((result) => {
+              return (
+                <Col className="col mb-2 text-center px-1">
+                  <Card style={{ height: "10em" }}>
+                    <Card.Img
+                      src={result.Poster}
+                      style={{objectFit: "cover", overflowY: "hidden"}}
+                    ></Card.Img>
+                  </Card>
+                </Col>
+              )
+            })}
+          </Row>
+        )  
             }    
         
     }

@@ -1,14 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import MyNavbar from './components/myNavbar'
-import FetchInfo from './components/FetchInfo'
+import HomeContainer from './components/HomeContainer'
+import MyFooter from './components/MyFooter'
 
 function App() {
   return (
     <>
       <MyNavbar />
-      <FetchInfo movie='Star Wars' />
-      <FetchInfo movie= 'Inception' />
+      <HomeContainer />
+      <MyFooter />
     </>
   )
 }
