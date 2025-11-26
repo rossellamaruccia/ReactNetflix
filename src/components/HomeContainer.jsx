@@ -1,7 +1,10 @@
 import { Container, Row } from "react-bootstrap"
 import FetchInfo from "./FetchInfo"
 
+
 const HomeContainer = () => {
+
+
   return (
     <>
       <title>Home</title>

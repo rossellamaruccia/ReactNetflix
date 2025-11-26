@@ -7,12 +7,12 @@ const TVShows = () => {
       <title>TV Shows</title>
       <Container fluid className="bg-dark">
         <Row>
-          <h2 className="text-white">Scrubs</h2>
-          <FetchInfo movie="scrubs" />
+          <h2 className="text-white">The Office</h2>
+          <FetchInfo movie="office" />
         </Row>
         <Row>
-          <h5 className="text-white">Breaking Bad</h5>
-          <FetchInfo movie="Breaking bad" />
+          <h5 className="text-white">Stranger Things</h5>
+          <FetchInfo movie="Stranger Things" />
         </Row>
         <Row>
           <h5 className="text-white">Malcolm</h5>

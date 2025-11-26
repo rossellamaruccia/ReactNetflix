@@ -13,19 +13,25 @@ const MyNavbar = () => {
                 alt="logo"
                 src="src\assets\logo.png"
                 height="35"
-                className="navbar.brand d-inline-block align-top"
+                className="navbar.brand d-inline-block align-top mx-3"
               />
             </Link>
-            <Link className="text-white fs-6" to="/">
+            <Link className="nav-link mx-3 text-white fs-6" to="/">
               Home
             </Link>
-            <Navbar.Brand className="text-white fs-6" href="#movies">
+            <Navbar.Brand
+              className="nav-link mx-3 text-white fs-6"
+              href="#movies"
+            >
               Movies
             </Navbar.Brand>
-            <Link className="text-white fs-6" to="/TV-Shows">
+            <Link className="nav-link mx-3 text-white fs-6" to="/TV-Shows">
               TV Shows
             </Link>
-            <Navbar.Brand className="text-white fs-6" href="#recently_added">
+            <Navbar.Brand
+              className="nav-link mx-3 text-white fs-6"
+              href="#recently_added"
+            >
               Recently Added
             </Navbar.Brand>
           </Container>
@@ -34,7 +40,7 @@ const MyNavbar = () => {
               <i class="bi bi-search text-white"></i>
             </Navbar.Text>
             <Navbar.Text>
-              <i class="bi bi-bell text-white mx-2"></i>
+              <i class="bi bi-bell text-white mx-3"></i>
             </Navbar.Text>
             <Navbar.Text>
               <i class="bi bi-person-circle text-white"></i>

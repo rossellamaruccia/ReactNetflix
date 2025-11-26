@@ -5,6 +5,7 @@
 import { Component } from "react"
 import { Row, Col, Card, Alert } from "react-bootstrap"
 import Spinner from "react-bootstrap/Spinner"
+import { Link } from "react-router-dom"
 
 class FetchInfo extends Component {
   state = {
@@ -14,7 +15,7 @@ class FetchInfo extends Component {
   }
 
   FetchFunction = () => {
-    const Url = "http://www.omdbapi.com/?i=tt3896198&apikey=7ddff0d8&s="
+    const Url = "http://www.omdbapi.com/?i=&apikey=7ddff0d8&s="
     fetch(Url + this.props.movie)
       .then((res) => {
         if (res.ok) {
@@ -67,9 +68,9 @@ class FetchInfo extends Component {
           </div>
         ) : (
           <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4">
-              {this.state.moviesObject.map((result) => {
-                return (
-                  // <Link to={'/details'+{result.imdbID}} >
+            {this.state.moviesObject.map((result) => {
+              return (
+                <Link to={"/details/" + result.imdbID}>
                   <Col
                     key={result.imdbID}
                     className="col mb-2 text-center px-1"
@@ -92,7 +93,7 @@ class FetchInfo extends Component {
                       ></Card.Img>
                     </Card>
                   </Col>
-                // </Link>
+                </Link>
               )
             })}
           </Row>
