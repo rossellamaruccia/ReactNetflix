@@ -1,29 +1,30 @@
 import Navbar from "react-bootstrap/Navbar"
 import Container from "react-bootstrap/Container"
 import "bootstrap-icons/font/bootstrap-icons.css"
+import { Link } from "react-router-dom"
 
 const MyNavbar = () => {
     return (
       <>
         <Navbar className="bg-dark w-100">
           <Container className="justify-content-start">
-            <Navbar.Brand href="#home">
+            <Link to="/">
               <img
                 alt="logo"
                 src="src\assets\logo.png"
                 height="35"
-                className="d-inline-block align-top"
+                className="navbar.brand d-inline-block align-top"
               />
-            </Navbar.Brand>
-            <Navbar.Brand className="text-white fs-6" href="#home">
+            </Link>
+            <Link className="text-white fs-6" to="/">
               Home
-            </Navbar.Brand>
+            </Link>
             <Navbar.Brand className="text-white fs-6" href="#movies">
               Movies
             </Navbar.Brand>
-            <Navbar.Brand className="text-white fs-6" href="#TV-Shows">
+            <Link className="text-white fs-6" to="/TV-Shows">
               TV Shows
-            </Navbar.Brand>
+            </Link>
             <Navbar.Brand className="text-white fs-6" href="#recently_added">
               Recently Added
             </Navbar.Brand>

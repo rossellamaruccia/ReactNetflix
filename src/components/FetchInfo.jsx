@@ -67,26 +67,32 @@ class FetchInfo extends Component {
           </div>
         ) : (
           <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4">
-            {this.state.moviesObject.map((result) => {
-              return (
-                <Col key={result.imdbID} className="col mb-2 text-center px-1">
-                  <Card
-                    style={{
-                      height: "8em",
-                      borderRadius: "0",
-                      border: "none",
-                    }}
+              {this.state.moviesObject.map((result) => {
+                return (
+                  // <Link to={'/details'+{result.imdbID}} >
+                  <Col
+                    key={result.imdbID}
+                    className="col mb-2 text-center px-1"
                   >
-                    <Card.Img
-                      src={result.Poster}
+                    <Card
                       style={{
-                        objectFit: "cover",
-                        objectPosition: "left top",
-                        overflow: "hidden",                      
+                        height: "8em",
                         borderRadius: "0",
-                      }}></Card.Img>
-                  </Card>
-                </Col>
+                        border: "none",
+                      }}
+                    >
+                      <Card.Img
+                        src={result.Poster}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "left top",
+                          overflow: "hidden",
+                          borderRadius: "0",
+                        }}
+                      ></Card.Img>
+                    </Card>
+                  </Col>
+                // </Link>
               )
             })}
           </Row>
